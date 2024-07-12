@@ -1,5 +1,8 @@
-from src.app import sum
-def main () -> None:
-    sum (5,10)
-    if __name__ == '__main__':
-        main ()
+from src.app import app
+
+HOST="localhost"
+PORT=4000
+DEBUG=True
+
+if __name__ == '__main__':
+        app.run(HOST, PORT, DEBUG)
