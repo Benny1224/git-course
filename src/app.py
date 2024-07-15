@@ -1,9 +1,16 @@
 from flask import Flask
 
 app =Flask (__name__)
+
 @app.route('/')
 def index():
     return "Bye Code!"
-@app.route('/sum/<int:num1>/<int:num2>')
+
+@app.route('/hello')
+def graeting():
+    return "Hello World!"
+
+@app.route('/sum/<int:a>/<int:b>')
 def sum (a:int, b:int ):
-    return a+b 
+    nums_sum = a+b
+    return f"La suma es: {str(nums_sum)}"
